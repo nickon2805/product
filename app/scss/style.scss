@@ -1,0 +1,488 @@
+@import 'vars';
+@import 'fonts';
+@import 'reset';
+@import 'libs';
+@import 'global';
+
+// header
+
+.header{
+  padding: 17px 0 50px;
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  &__inner-left{
+    width: 730px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__inner-right{
+    width: 532px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__social-inner{
+    width: 112px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__teamname-inner{
+    background-image: url('../images/decor/teamname-decor.png');
+    width: 239px;
+    height: 58px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 21px 36px;
+  }
+  &__teamname-live{
+    width: 39px;
+    height: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F92728;
+    font-size: 10px;
+    line-height: 10px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    @extend %gothampro-700;
+  }
+  &__teamname-versus{
+    font-size: 20px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    @extend %gothampro-900;
+  }
+  &__teamname-namebox{
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &__teamname-name{
+    font-size: 12px;
+    line-height: 11px;
+    color: #FFFFFF;
+    @extend %gothampro-400;
+  }
+  &__usermenu{
+    width: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__usermenu-icongradient{
+    border-radius: 20px;
+    width: 75px;
+    height: 75px;
+    position: relative;
+    z-index: 10;
+    &::before{
+      content: "";
+      position: absolute;
+      top: -2px;
+      bottom: -2px;
+      left: -2px;
+      right: -2px;
+      z-index: -1;
+      border-radius: 20px;
+      background: linear-gradient(360deg, #FC03A6 1.7%, #06A7FE 100%);
+    }
+  }
+  &__usermenu-info{
+    width: 131px;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &__usermenu-name{
+    font-size: 16px;
+    line-height: 120%;
+    color: #6E6E86;
+    @extend %gothampro-700;
+    position: relative;
+    span{
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+  &__usermenu-num{
+    font-size: 14px;
+    line-height: 120%;
+    color: #FFFFFF;
+    @extend %gothampro-700;
+    position: relative;
+    span{
+      position: absolute;
+      top: 0;
+      left: 75px;
+    }
+  }
+}
+
+.menu{
+  background-image: url('../images/decor/social-decor.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 383px;
+  padding: 21px 40px;
+  &__list{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__list-link{
+    font-size: 17px;
+    line-height: 17px;
+    color: #fff;
+    @extend %gothamproitalic-400;
+  }
+}
+
+// match
+
+.match{
+  overflow: hidden;
+  height: 636px;
+  max-width: 1158px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  &__items-arrows{
+    position: absolute;
+    top: 49%;
+    transform: translateY(-50%);
+    z-index: 100;
+    width: 100%;
+  }
+  &__arrows-left{
+    border: none;
+    background: transparent;
+    left: 0;
+    cursor: pointer;
+    position: absolute;
+  }
+  &__arrows-right{
+    border: none;
+    background: transparent;
+    right: 0;
+    cursor: pointer;
+    position: absolute;
+  }
+  &__items{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 569px;
+    position: relative;
+  }
+  &__item{
+    width: 1106px;
+    margin: 0 auto;
+  }
+  &__item-login{
+    margin: 0 auto;
+    width: 203px;
+    height: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #0E0F11;
+    border-radius: 10px 10px 0px 0px;
+    font-size: 10px;
+    line-height: 11px;
+  }
+  &__item-room{
+    padding: 0 30px 0 56px;
+    border: 2.5px solid #6E6E86;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    height: 81px;
+  }
+  &__item-roomLineHalf{
+
+  }
+  &__room-left{
+    display: flex;
+    width: 444px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__roomleft-numbox{
+    display: flex;
+    width: 185px;
+    justify-content: space-between;
+  }
+  &__roomleft-money{
+    width: 80px;
+    height: 53px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &__roomleft-moneytext{
+    font-size: 10px;
+    line-height: 11px;
+    text-align: center;
+  }
+  &__roomleft-moneynum{
+    font-size: 26px;
+    line-height: 25px;
+    text-align: center;
+    color: #6E6E86;
+    @extend %gothampro-700;
+  }
+  &__roomleft-percent{
+    width: 80px;
+    height: 53px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &__roomleft-percenttext{
+    font-size: 10px;
+    line-height: 11px;
+    text-align: center;
+  }
+  &__roomleft-percentnum{
+    font-size: 26px;
+    line-height: 25px;
+    text-align: center;
+    color: #6E6E86;
+    @extend %gothampro-700;
+  }
+  &__roomleft-team{
+    display: flex;
+    width: 162px;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    line-height: 11px;
+    z-index: 10;
+    margin-top: -21px;
+  }
+  &__roomleft-win{
+      width: 87px;
+      height: 14px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #636363;
+      border-radius: 10px;
+      font-size: 9px;
+      line-height: 9px;
+      text-transform: uppercase;
+      @extend %gothampro-700;
+  }
+  &__roomleft-winbox{
+    width: 85px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  &__room-right{
+    display: flex;
+    width: 444px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__roomright-numbox{
+    display: flex;
+    width: 185px;
+    justify-content: space-between;
+  }
+  &__roomright-money{
+    width: 80px;
+    height: 53px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &__roomright-moneytext{
+    font-size: 10px;
+    line-height: 11px;
+    text-align: center;
+  }
+  &__roomright-moneynum{
+    font-size: 26px;
+    line-height: 25px;
+    text-align: center;
+    color: #6E6E86;
+    @extend %gothampro-700;
+  }
+  &__roomright-percent{
+    width: 80px;
+    height: 53px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &__roomright-percenttext{
+    font-size: 10px;
+    line-height: 11px;
+    text-align: center;
+  }
+  &__roomright-percentnum{
+    font-size: 26px;
+    line-height: 25px;
+    text-align: center;
+    color: #6E6E86;
+    @extend %gothampro-700;
+  }
+  &__roomright-team{
+    display: flex;
+    width: 162px;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    line-height: 11px;
+    z-index: 10;
+    margin-top: -21px;
+  }
+    &__roomright-team{
+    display: flex;
+    width: 162px;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    line-height: 11px;
+    z-index: 10;
+    margin-top: -21px;
+  }
+  &__roomright-win{
+      width: 87px;
+      height: 14px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #636363;
+      border-radius: 10px;
+      font-size: 9px;
+      line-height: 9px;
+      text-transform: uppercase;
+      @extend %gothampro-700;
+  }
+  &__roomright-winbox{
+    width: 85px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  &__room-center{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+    left: 50%;
+    bottom: -3px;
+    transform: translateX(-50%);
+  }
+  &__roomcenter-end{
+    font-size: 10px;
+    line-height: 11px;
+    text-transform: uppercase;
+  }
+  &__roomcenter-versus{
+    font-size: 35px;
+    line-height: 34px;
+    @extend %gothampro-900;
+  }
+  &__roomcenter-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7px 18px;
+    width: 554px;
+    height: 26px;
+    background: #636363;
+    border-radius: 40px;
+    font-size: 10px;
+    line-height: 11px;
+    z-index: -1;
+  }
+  &__roomleft-winRed{
+    background-color: #FC03A6;
+  }
+  &__roomleft-winBlue{
+    background-color: #009EEC;
+  }
+  &__roomright-winRed{
+    background-color: #FC03A6;
+  }
+  &__roomright-winBlue{
+    background-color: #009EEC;
+  }
+  &__roomcenter-live{
+    font-size: 10px;
+    line-height: 11px;
+    text-transform: uppercase;
+    position: relative;
+    &::before{
+      content: "";
+      position: absolute;
+      width: 4px;
+      height: 4px;
+      top: 2px;
+      left: -6px;
+      border-radius: 50%;
+      background: #009EEC;
+    }
+  }
+  &__roomcenter-start{
+    font-size: 10px;
+    line-height: 11px;
+  }
+  &__roomleft-moneynumRed,
+  &__roomleft-percentnumRed{
+    color: #F606A7;
+  }
+  &__roomright-moneynumBlue,
+  &__roomright-percentnumBlue{
+    color: #009EEC;
+  }
+  &__roomcenter-boxGradient{  
+    background: linear-gradient(90deg, #FC03A6 0%, #009EEC 100%);
+  }
+  &__date{
+    margin: 0 auto;
+    width: 254px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__date-link{
+    font-size: 14px;
+    line-height: 15px;
+    color: rgba(255, 255, 255, 0.4);
+  }
+  &__date-now{
+    font-size: 19px;
+    line-height: 18px;
+    color: #fff;
+    @extend %gothampro-700;
+  }
+}
+
+
+
+@import 'media';
