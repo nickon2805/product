@@ -23,8 +23,7 @@ body{
 
 // left btn
 
-.info{
-  &__btn{
+.info-btn{
     width: 21px;
     height: 204px;
     background: rgba(102, 99, 128, 0.4);
@@ -39,5 +38,4 @@ body{
     z-index: 100;
     top: 214px;
     left: 0;
-  }
 }
