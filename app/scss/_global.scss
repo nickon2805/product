@@ -6,6 +6,7 @@ body {
 body{
   color: #fff;
   @extend %gothampro-400;
+  background: #212136;
 }
 
 .container{
@@ -13,12 +14,33 @@ body{
   margin: 0 auto;
   padding: 0 10px;
 }
+
+.container-lg{
+  max-width: 1780px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.wrapper{
+  width: 1288px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
 .main{
   background-image: url('../images/bg-1.jpg');
-  height: 100% calc();
+  min-height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 0 0;
+}
+
+.main-profile{
+  background-image: url('../images/decor/profile-bg.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right bottom;
+  min-height: 100vh;
 }
 
 // left btn
@@ -38,4 +60,399 @@ body{
     z-index: 100;
     top: 214px;
     left: 0;
+}
+
+.live{
+  width: 39px;
+  height: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #F92728;
+  font-size: 10px;
+  line-height: 10px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  @extend %gothampro-700;
+}
+
+.icon{
+  border-radius: 20px;
+  width: 75px;
+  height: 75px;
+  position: relative;
+  z-index: 10;
+  // box-shadow: 0px 5px 50px -13px rgba(0, 165, 255, 1);
+  &::before{
+    content: "";
+    position: absolute;
+    top: -2px;
+    bottom: -2px;
+    left: -2px;
+    right: -2px;
+    z-index: -1;
+    border-radius: 20px;
+    background: linear-gradient(360deg, #FC03A6 1.7%, #06A7FE 100%);
+    // box-shadow: 0px 5px 50px -13px rgba(0, 165, 255, 1);
+  }
+}
+
+.btn-close{
+  position: absolute;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.btn-arrow{
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  position: absolute;
+}
+
+.user-name{
+  font-size: 16px;
+  line-height: 120%;
+  color: #6E6E86;
+  @extend %gothampro-700;
+  position: relative;
+}
+
+.purse{
+  font-size: 14px;
+  line-height: 120%;
+  color: #FFFFFF;
+  @extend %gothampro-700;
+  position: relative;
+}
+
+.player-name{
+  font-size: 12px;
+  line-height: 11px;
+  color: #FFFFFF;
+}
+
+.player-img{
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.popup-title{
+  font-size: 30px;
+  line-height: 29px;
+  color: #F3E6E6;
+  @extend %gothampro-700;
+}
+
+.title{
+  font-size: 18px;
+  line-height: 120%;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  @extend %gothampro-900;
+}
+
+// .box-input__login{
+//   position: relative;
+//   span{
+//     // position: absolute;
+//     // background: #31234C;
+//     // padding: 0 3px;
+//     // left: 48px;
+//     // top: -8px;
+//     // font-size: 16px;
+//     // line-height: 15px;
+//     // color: #F3E6E6;
+//     // z-index: 9999;
+//   }
+// }
+
+.fieldset-input{
+  position: relative;
+  padding: 0;
+  border: 1px solid #009EEC;
+  border-radius: 40px;
+  background-color: transparent;
+  height: 63px;
+  legend{
+    padding: 0 3px;
+    font-size: 16px;
+    line-height: 15px;
+    color: #F3E6E6;
+    margin-left: 48px;
+  }
+}
+
+.input-login{
+  width: 386px;
+  height: 47px;
+  // height: 56px;
+  border: none;
+  // border: 1px solid #009EEC;
+  border-radius: 40px;
+  background-color: transparent;
+  padding: 20px 48px;
+  font-size: 16px;
+  line-height: 15px;
+  outline: none;
+  color: rgba(243, 230, 230, 0.6);
+  &::placeholder{
+    font-size: 17px;
+    line-height: 15px;
+    color: rgba(243, 230, 230, 0.6);
+    @extend %gothampro-300;
+  }
+}
+
+.btn-login{
+  width: 100%;
+  height: 56px;
+  border-radius: 40px;
+  background-color: transparent;
+  display: flex;  
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 20px;
+  line-height: 19px;
+  color: #F3E6E6;
+  border: none;
+  background-image: url('../images/decor/btn-decor.svg');
+  background-repeat: no-repeat;
+}
+
+.welcome{
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.welcome-inner{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.welcome-box{
+  width: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.popup-bg{
+  min-height: 100vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 0;
+}
+
+.output-btn{
+  width: 130px;
+  height: 43px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background: linear-gradient(90deg, #212136 0%, #212136 100%);
+  border-radius: 9px;
+  border: none;
+}
+
+.output-btn_active{
+  background: linear-gradient(90deg, #F505A6 0%, #0699EA 100%);
+}
+
+.input-title{
+  font-size: 16px;
+  line-height: 15px;
+  color: #F3E6E6;
+}
+
+.output-input{
+  width: 233px;
+  height: 34px;
+  background: #212136;
+  border-radius: 11px;
+  border: none;
+  padding: 10px 26px 10px 17px;
+  font-size: 14px;
+  line-height: 13px;
+  color: #616198;
+  position: relative;
+  &::placeholder{
+    font-size: 14px;
+    line-height: 13px;
+    color: #616198;
+  }
+}
+
+.output-form__btn{
+  width: 237px;
+  height: 34px;
+  border: none;
+  border-radius: 13px;
+  font-size: 12px;
+  line-height: 11px;
+  color: #F3E6E6;
+  @extend %gothampro-700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: transparent;
+  background-image: url('../images/decor/btn-decor.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.output-miniinput{
+  width: 250px;
+  height: 32px;
+  background: #212136;
+  border-radius: 11px;
+  border: none;
+  padding: 17px 10px;
+  font-size: 14px;
+  line-height: 13px;
+  color: #616198;
+  &::placeholder{
+    font-size: 14px;
+    line-height: 13px;
+    color: #616198;
+  }
+}
+
+.output-num{
+  font-size: 14px;
+  line-height: 13px;
+  @extend %gothampro-700;
+}
+
+.profile-id{
+  font-size: 12px;
+  line-height: 120%;  
+  color: #71718B;
+}
+
+.profile-name{
+  font-size: 17px;
+  line-height: 120%;
+  color: #fff;
+  @extend %gothampro-700;
+  span{
+    display: inline-block;
+  }
+}
+
+.profile-subname{
+  font-size: 12px;
+  line-height: 120%;
+  color: #71718B;
+}
+
+.info-list{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 8px;
+  border-bottom: 1px solid  #71718B;
+}
+
+.info-link{
+  font-size: 14px;
+  line-height: 120%;
+  letter-spacing: 0.03em;
+  color: #FFFFFF;
+  padding-left: 13px;
+  position: relative;
+  &::before{
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: 0;
+    width: 5px;
+    height: 5px;
+    background: #E308FF;
+    box-shadow: 0px 0px 5px #E308FF;
+    border-radius: 50%;
+  }
+}
+
+.lk-list{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 33px;
+  &:hover{
+    background: #363652;
+    border-left: 3px solid #D60A51;
+    transition: all .3s;
+  }
+}
+
+.lk-link{
+  width: 100px;
+  font-size: 16px;
+  line-height: 120%;
+  color: #71718B;
+}
+
+.friends-online{
+  max-width: 74px;
+  font-size: 14px;
+  line-height: 120%;
+  color: #FFFFFF;
+  @extend %gothampro-700;
+  position: relative;
+  &::after{
+    content: "";
+    position: absolute;
+    top: 2px;
+    right: 0;
+    width: 18px;
+    height: 12px;
+    background-image: url('../images/icons/sms.png');
+    background-repeat: no-repeat;
+  }
+}
+
+.friends-btn{
+  width: 90px;
+  height: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 7px;
+  font-size: 10px;
+  line-height: 120%;
+  color: #fff;
+  @extend %gothampro-700;
+  border: none;
+  cursor: pointer;
+}
+
+.friends-yet{
+  width: 187px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 12px;
+  line-height: 11px;
+  color: #F3E6E6;
+  @extend %gothampro-700;
+  background-image: url('../images/decor/friends-btn.svg');
+  background-repeat: no-repeat;
 }
